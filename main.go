@@ -26,6 +26,10 @@ var sep = flag.String("s", " ", "seperator")
 func CToF(c Celcius) Fahrenheit { return Fahrenheit(c + 32) }
 func FToC(f Fahrenheit) Celcius { return Celcius(f - 32) }
 
+func init() {
+  fmt.Println("Called Implicitly")
+}
+
 // notice how the flag variables are being accessed as pointers.
 func main(){
   flag.Parse()
